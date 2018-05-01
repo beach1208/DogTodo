@@ -3,6 +3,7 @@ package DogTodo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -10,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,8 +26,7 @@ public class Controller implements Initializable {
     @FXML TextField textf;
     @FXML ListView<DogToDoEvent> eventList;
     @FXML Button remove;
-    @FXML private ImageView ImageView;
-    @FXML private ImageView ImageView2;
+    @FXML private ImageView imageView;
 
 
     ObservableList<DogToDoEvent> list = FXCollections.observableArrayList();
@@ -39,10 +40,19 @@ public class Controller implements Initializable {
     public void removeEvent(Event e) {
         int selectedItem = eventList.getSelectionModel().getSelectedIndex();
         list.remove(selectedItem);
-
-        Image image = new Image("DogTodo/img/Shibainu_Maru.jpg");
-        ImageView.setImage(image);
-
+    }
+    @FXML
+    public void handleMouseClick() {
+        eventList.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if(event.getClickCount() > 3){
+                    System.out.println("Mouse clicked three times");
+                    Image image = new Image("DogTodo/img/Shibainu_Maru.jpg");
+                    imageView.setImage(image);
+                }
+            }
+        });
 
     }
 
