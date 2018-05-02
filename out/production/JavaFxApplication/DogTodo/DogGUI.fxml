@@ -17,7 +17,6 @@
          </font>
       </Label>
       <Pane layoutX="642.0" prefHeight="600.0" prefWidth="383.0" style="-fx-background-color: e8cc6a;" />
-      <ImageView fx:id="imageView" fitHeight="108.0" fitWidth="159.0" layoutX="421.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true" />
       <Pane layoutY="72.0" prefHeight="528.0" prefWidth="642.0" style="-fx-background-color: ffffff;">
          <children>
             <ListView fx:id="eventList" layoutX="52.0" layoutY="72.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="534.0" />
@@ -27,7 +26,7 @@
                   <Font name="Helvetica Neue Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="remove" layoutX="514.0" layoutY="449.0" mnemonicParsing="false" onAction="#removeEvent" onMouseClicked="#handleMouseClick" prefHeight="24.0" prefWidth="85.0" style="-fx-background-color: bbbbbb;" text="REMOVE" textFill="WHITE">
+            <Button fx:id="remove" layoutX="514.0" layoutY="449.0" mnemonicParsing="false" onAction="#removeEvent" prefHeight="24.0" prefWidth="85.0" style="-fx-background-color: bbbbbb;" text="REMOVE" textFill="WHITE">
                <font>
                   <Font name="Helvetica Neue Bold" size="13.0" />
                </font>
@@ -37,6 +36,7 @@
                   <Font name="Helvetica Neue Bold" size="18.0" />
                </font>
             </Label>
+            <ImageView fx:id="imageView" fitHeight="109.0" fitWidth="183.0" layoutX="374.0" layoutY="321.0"  pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
    </children>

@@ -26,7 +26,8 @@ public class Controller implements Initializable {
     @FXML TextField textf;
     @FXML ListView<DogToDoEvent> eventList;
     @FXML Button remove;
-    @FXML private ImageView imageView;
+    @FXML ImageView imageView;
+
 
 
     ObservableList<DogToDoEvent> list = FXCollections.observableArrayList();
@@ -36,26 +37,23 @@ public class Controller implements Initializable {
         eventList.setItems((list));
         textf.clear();
     }
+
+    int count = 0;
     @FXML
     public void removeEvent(Event e) {
         int selectedItem = eventList.getSelectionModel().getSelectedIndex();
         list.remove(selectedItem);
+        count++;
+        if (count > 3) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION,"Copper is happy!",ButtonType.CANCEL);
+            Image image = new Image("DogTodo/img/Shibainu_Maru.jpg");
+           ImageView imageView = new ImageView(image);
+            alert.setTitle("Cooper's Feeling");
+            alert.setHeaderText("Look, How happy she is!");
+            alert.setGraphic(imageView);
+            alert.setContentText("Copper loves you! ");
+
+            alert.showAndWait();
+        }
     }
-    @FXML
-    public void handleMouseClick() {
-        eventList.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if(event.getClickCount() > 3){
-                    System.out.println("Mouse clicked three times");
-                    Image image = new Image("DogTodo/img/Shibainu_Maru.jpg");
-                    imageView.setImage(image);
-                }
-            }
-        });
-
-    }
-
-
-
 }
