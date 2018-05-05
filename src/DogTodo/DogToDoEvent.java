@@ -1,11 +1,15 @@
 package DogTodo;
 
 
+import javafx.scene.control.CheckBox;
+
 public class DogToDoEvent {
     private String description;
+    private CheckBox done;
 
     public DogToDoEvent(String description) {
         this.setDescription(description);
+        this.done = new CheckBox();
 
     }
 
@@ -15,6 +19,14 @@ public class DogToDoEvent {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public CheckBox getDone() {
+        return done;
+    }
+
+    public void setDone(CheckBox done) {
+        this.done = done;
     }
 
     @Override
