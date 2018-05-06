@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: CEB252;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DogTodo.Controller">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: CEB252; -fx-pref-width: 900;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DogTodo.Controller">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="16.0" prefHeight="41.0" prefWidth="129.0" text="DOG TO DO" textFill="WHITE">
          <font>
