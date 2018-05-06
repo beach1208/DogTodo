@@ -22,7 +22,7 @@
          <children>
             <ImageView fitHeight="207.0" fitWidth="223.0" layoutX="80.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../img_profile.png" />
+                  <Image url="./img/img_profile.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="336.0" prefHeight="41.0" prefWidth="183.0" text="COOPER" textFill="WHITE">
@@ -32,7 +32,7 @@
             </Label>
             <ImageView fitHeight="28.0" fitWidth="166.0" layoutX="109.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../img_border.png" />
+                  <Image url="./img/img_border.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="452.0" prefHeight="41.0" prefWidth="119.0" text="March 21st" textFill="WHITE">
@@ -42,7 +42,7 @@
             </Label>
             <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="115.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../ico_bday.png" />
+                  <Image url="./img/ico_bday.png" />
                </image>
             </ImageView>
          </children></Pane>
@@ -69,7 +69,7 @@
       </Pane>
       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../logo.png" />
+            <Image url="./img/logo.png" />
          </image>
       </ImageView>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" layoutY="89.0" prefHeight="41.0" prefWidth="322.0" text="COOPER'S TO DO" textFill="#ceb252">
