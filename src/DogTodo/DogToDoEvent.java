@@ -1,5 +1,8 @@
 package DogTodo;
 
+/**
+ * @author Nagisa Kojima, Natsumi Kobayashi
+ */
 
 import javafx.scene.control.CheckBox;
 

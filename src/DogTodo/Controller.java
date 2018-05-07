@@ -1,5 +1,9 @@
 package DogTodo;
 
+/**
+ * @author Nagisa Kojima, Natsumi Kobayashi
+ */
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
@@ -28,7 +32,6 @@ public class Controller implements Initializable {
     @FXML TableColumn<DogToDoEvent, String> doneCol;
     @FXML Button remove;
     @FXML ImageView imageView;
-
 
 
     ObservableList<DogToDoEvent> list = FXCollections.observableArrayList();

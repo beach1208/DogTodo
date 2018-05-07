@@ -6,13 +6,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * @author Nagisa Kojima, Natsumi Kobayashi
+ */
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("DogGUI.fxml"));
         primaryStage.setTitle("DOG TO DO");
-        primaryStage.setScene(new Scene(root, 600, 600));
+        primaryStage.setScene(new Scene(root, 1010, 610));
+        primaryStage.setMaxHeight(610.0);
+        primaryStage.setMaxWidth(1010.0);
         primaryStage.show();
     }
 
