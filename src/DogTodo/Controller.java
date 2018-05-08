@@ -1,9 +1,5 @@
 package DogTodo;
 
-/**
- * @author Nagisa Kojima, Natsumi Kobayashi
- */
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
