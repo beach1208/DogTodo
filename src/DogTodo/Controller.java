@@ -1,4 +1,7 @@
 package DogTodo;
+/**
+ *@author Natsumi Kobayashi, Nagisa Kojima
+ */
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -30,6 +33,9 @@ public class Controller implements Initializable {
     @FXML ImageView imageView;
 
 
+    /**
+     * Create a List to add To do descriptions. Once descriptions are added, textfield is clear.
+     */
     ObservableList<DogToDoEvent> list = FXCollections.observableArrayList();
     @FXML
     public void addEvent(Event e) {
@@ -38,18 +44,34 @@ public class Controller implements Initializable {
         textf.clear();
     }
 
+    /**
+     * Remove to do items from the list. Depends on numbers of Remove button pressed, alert dialog pops up.
+     */
     int count = 0;
     @FXML
     public void removeEvent(Event e) {
         int selectedItem = tableView.getSelectionModel().getSelectedIndex();
         list.remove(selectedItem);
         count++;
-        if (count > 3) {
+
+        if (count == 3) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION,"Copper is unhappy!",ButtonType.CANCEL);
+            Image image = new Image("DogTodo/img/sadshiba.jpg");
+            ImageView imageView = new ImageView(image);
+            alert.getDialogPane().setPrefSize(600, 300);
+            alert.setTitle("Cooper's Feeling");
+            alert.setHeaderText("You have done "+ count+ " tasks today.\nBut She is not happy");
+            alert.setGraphic(imageView);
+            alert.setContentText("Copper needs to be taken care of.... ");
+            alert.showAndWait();
+        }
+        if (count >= 6) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION,"Copper is happy!",ButtonType.CANCEL);
             Image image = new Image("DogTodo/img/Shibainu_Maru.jpg");
            ImageView imageView = new ImageView(image);
+            alert.getDialogPane().setPrefSize(600, 300);
             alert.setTitle("Cooper's Feeling");
-            alert.setHeaderText("You have done "+ count+ " tasks today. Look, How happy she is!");
+            alert.setHeaderText("You have done "+ count+ " tasks today.\nLook, How happy she is!");
             alert.setGraphic(imageView);
             alert.setContentText("Copper loves you! ");
 
@@ -57,7 +79,11 @@ public class Controller implements Initializable {
         }
     }
 
-
+    /**
+     *
+     * @param location setting location of CheckBox button
+     * @param resources
+     */
     public void initialize(URL location, ResourceBundle resources) {
 
         final ObservableList<DogToDoEvent> data = FXCollections.observableArrayList();

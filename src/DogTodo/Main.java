@@ -1,4 +1,7 @@
 package DogTodo;
+/**
+ *@author Natsumi Kobayashi, Nagisa Kojima
+ */
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
